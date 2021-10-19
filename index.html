@@ -24,7 +24,7 @@
         html,
         body {
             background-color: #152733;
-            /* background-image: url("{{asset('/img/login-register.jpg')}}"); */
+            <!-- background-image: url("{{asset('/img/login-register.jpg')}}"); -->
             background-size: cover;
             background-repeat:no-repeat;
             
@@ -174,16 +174,20 @@
             color: #2acc80;
         }
 
+        
+
     </style>
 </head>
 
 <body class="container">
+  <div class="box">
     <div class="form-body" style="margin-left: 254px">
         <div class="row">
             <div class="form-holder">
                 <div class="form-content">
-                    <div class="form-items">
+                    <div class="form-items" style="background: linear-gradient(to right, #000046, #1cb5e0);">
                         <h3 class="text-center">Activate Your Account</h3>
+                        
                         <form id="form" method="post" action="{{route('activate.store')}}">
                           @csrf
                           <div class="form-group">
@@ -201,13 +205,12 @@
                           <input type="hidden" value="{{$getting_token}}" name="tokenIsComming">
                           <input type="submit" class="btn btn-primary" value="Submit" />
                         </form>
-
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
+  </div>
 </body>
 <style>
     .error {
